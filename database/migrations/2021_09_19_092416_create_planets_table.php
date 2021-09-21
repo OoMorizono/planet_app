@@ -14,10 +14,12 @@ class CreatePlanetsTable extends Migration
     public function up()
     {
         Schema::create('planets', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('name');
             $table->string('enname');
             $table->integer('radius');
             $table->integer('weight');
+            $table->timestamps();
         });
     }
 
