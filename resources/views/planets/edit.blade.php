@@ -26,7 +26,6 @@
     <form action="/planets/{{ $planet->id }}" method="post">
         @csrf
         @method('PATCH')
-        <input type="hidden" name="id" value="{{ $planet->id }}">
         <label for="name">名前</label>
         <input type="text" name="name" value="{{ old('name', $planet->name) }}">
         <label for="enname">名前（英語）</label>
@@ -40,7 +39,7 @@
             <input type="submit" value="更新">
         </div>
         <div>
-            <a href="http://localhost/planets">戻る</a>
+            <a href="/planets">戻る</a>
         </div>
     </form>
 </body>

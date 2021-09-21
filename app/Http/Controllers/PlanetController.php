@@ -28,7 +28,6 @@ class PlanetController extends Controller
     {
         $planet = new Planet();
 
-        $planet->timestamps = false;
         $planet->name = $request->name;
         $planet->enname = $request->enname;
         $planet->radius = $request->radius;
@@ -48,7 +47,6 @@ class PlanetController extends Controller
     {
         $planet = Planet::find($id);
 
-        $planet->timestamps = false;
         $planet->name = $request->name;
         $planet->enname = $request->enname;
         $planet->radius = $request->radius;
